@@ -1,119 +1,278 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScatterPlotBar instructions</title>
-  <meta name="description" content="Instructions page rebuilt from the current live content into a static local page." />
-  <link rel="canonical" href="https://scatterplot.bar/instructions.html" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  
-    <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html">ScatterPlot.Bar</a>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav id="siteNav" class="site-nav" aria-label="Primary">
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>ScatterPlotBar instructions</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGSFY6WJN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-PLGSFY6WJN');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) { return; }
+        }
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+      ym(93453251, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      });
+    </script>
+
+    <meta name="keywords" content="Instructions ScatterPlot.Bar" />
+    <meta name="description" content="Instructions on How to Use ScatterPlot.Bar Web App" />
+    <link rel="canonical" href="https://scatterplot.bar/instructions.html" />
+
+    <style>
+      /* Added responsive video support while preserving the original page structure */
+      .video-section p.video-title {
+        margin-bottom: 0.75rem;
+      }
+
+      .video-embed {
+        position: relative;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto 1.25rem auto;
+        padding-top: 56.25%;
+      }
+
+      .video-embed iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .video-links {
+        margin: 0 0 2rem 0;
+        text-align: center;
+      }
+
+      .video-links a {
+        font-weight: 600;
+      }
+
+      @media screen and (max-width: 736px) {
+        .wrapper.style1 .container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+
+      <!-- Header -->
+      <div id="header">
+        <div class="inner">
+          <header>
+            <h1><a href="index.html" id="logo">ScatterPlotBar instructions</a></h1>
+          </header>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
           <ul>
-            <li><a href="correlation-heatmap.html">Correlation Heatmap</a></li><li><a href="calcium-imaging.html">Calcium Imaging</a></li><li><a href="volume-from-mass-and-concentration-mM.html">Volume and Molarity</a></li><li><a href="https://forms.gle/txsjwFGLGsriBfni9" target="_blank" rel="noopener noreferrer">Feedback</a></li><li><a href="news.html">News</a></li><li><a href="instructions.html" aria-current="page">Instructions</a></li><li><a href="blog/">Blog</a></li>
-            <li class="nav-dropdown">
-              <button class="dropdown-trigger" type="button" aria-expanded="false">Languages</button>
-              <ul class="dropdown-menu">
-                <li><a href="#" aria-current="true">English</a></li>
+            <li><a href="index.html">ScatterPlot Bar Generator</a></li>
+            <li><a href="correlation-heatmap.html">Correlation Heatmap</a></li>
+            <li><a href="calcium-imaging.html">Calcium Imaging</a></li>
+            <li><a href="volume-from-mass-and-concentration-mM.html">Volume and Molarity</a></li>
+            <li><a href="https://forms.gle/txsjwFGLGsriBfni9">Feedback</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li>
+              <a href="#">Languages</a>
+              <ul>
+                <li><a href="index.html">English</a></li>
               </ul>
             </li>
           </ul>
         </nav>
       </div>
-    </header>
-    
-  <main id="main-content">
-    
-    <section class="page-intro">
-      <div class="container">
-        <h1>ScatterPlotBar instructions</h1>
-        <p>This page restructures the live instructions content into a cleaner local reference page.</p>
-      </div>
-    </section>
-    <section class="page-content">
-      <div class="container page-grid">
-        <article class="stack">
-          <section>
-            <h2>Demo Web App for Calcium Imaging Time-Lapse Series Analysis</h2>
-            <p>The live page describes the calcium imaging app as a demo that will crash if more than four frames are analysed on the server. For larger series, it points users to the GitHub code and notes that running the code as a Shiny app would require an environment such as RStudio.</p>
-          </section>
-          <section>
-            <h2>Generation of Correlation Heatmaps Online</h2>
-            <p>The instructions explain that detrending can produce negative values, and the app converts those negatives to NaN values before continuing.</p>
-            <pre>br &lt;- 50
-break.points &lt;- seq(from = br, to = dim(dat2)[1], by = br)
-dat3 &lt;- dat2
-for (i in 1:dim(dat2)[2]) {
-  dat3[, i] &lt;- detrend(dat2[, i], bp = break.points)
+
+      <!-- Video -->
+      <div class="wrapper style1">
+        <div class="container">
+          <article id="video" class="special video-section">
+            <header>
+              <h2><a href="calcium-imaging.html">Demo Web App for Calcium Imaging Time-Lapse Series Analysis</a></h2>
+              <p>
+                This is a <a href="https://scatterplot.bar/calcium-imaging.html" target="_blank" rel="noreferrer">demo app</a>
+                that would crush if you attempted to analyse more than four frames. For larger series analysis,
+                download code at <a href="https://github.com/Antibody/Calcium-Imaging-with-EBImage/blob/main/app.R" target="_blank" rel="noreferrer">GitHub (click)</a>.
+                Running the code as a Shiny app would require e.g. RStudio.
+              </p>
+
+              <h2><a href="correlation-heatmap.html">Generation of Correlation Heatmaps Online</a></h2>
+              <p>
+                If Pearson's correlation is done after detrending, negative values are often generated.
+                The app converts all negatives to NaNs (Not-a-Number).
+              </p>
+              <p>
+                Detrending is done using the following R language expression and it uses multiple breaking points (bp).
+              </p>
+              <pre><code>br <- 50 # breaking point
+break.points <- seq(from = br, to = dim(dat2)[1], by = br)
+dat3 <- dat2  # imported data stored in dat2
+
+for(i in 1:dim(dat2)[2]) {  # run each Sample in a dataframe in a loop
+  dat3[, i] <- detrend(dat2[, i], bp = break.points)  # detrend the data
 }
-dat3[, 1] &lt;- dat2[, 1]</pre>
-          </section>
-          <section>
-            <h2>Video instructions</h2>
-            <ul class="section-list inline-code-list">
-              <li><p>How to make a scatter plot overlaid with column graphs online.</p></li>
-              <li><p>How to make a grouped graph combined with scatter plot online.</p></li>
-              <li><p>How to make stacked bar charts online and generate percent stacked bar charts on the web.</p></li>
-            </ul>
-          </section>
-        </article>
-        <aside class="stack">
-          <section>
-            <h2>Parametric tests in R online</h2>
-            <pre>t.test(Condition_1, Condition_2)
 
-t.test(Condition_1, Condition_2, paired = TRUE)
+dat3[, 1] <- dat2[, 1]  ## This line replaces detrended "Time" column with original values</code></pre>
 
-res.aov &lt;- aov(value ~ variable)
-summary(res.aov)
-TukeyHSD(res.aov)
+              <p>
+                The users have an option to choose heatmaps from the R package <code>pheatmap</code>,
+                which generates a blue-to-yellow-to-red palette, or from the package <code>gplots</code>
+                using <code>heatmap.2</code>. The latter uses yellow-to-red as default. Users can also choose
+                palettes such as <code>bluered</code> or <code>greenred</code>.
+              </p>
 
-res.aov &lt;- aov(Values ~ Categories_from_column_2 + Categories_from_column_1)
-summary(res.aov)
-TukeyHSD(res.aov)</pre>
-          </section>
-          <section>
-            <h2>Non-parametric tests in R online</h2>
-            <pre>wilcox.test(Condition_1, Condition_2, exact = FALSE)
+              <p>
+                Users can also calculate the percentage of correlating pairs out of the total number of all possible
+                pairs in the sample. Finally, one can calculate all datapoints above a certain threshold
+                (default is zero), evaluating e.g. overall sample activity.
+              </p>
 
-wilcox.test(Condition_1, Condition_2, exact = FALSE, paired = TRUE)
+              <h2><a href="#video-instructions">Video instructions</a></h2>
+              <p class="video-title">How to make a scatter plot overlaid with column graphs online</p>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/cKapasYw4VU?cc_load_policy=1&vq=hd1080"
+                  title="How to make a scatter plot overlaid with column graphs online"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="video-links">
+                <a href="https://www.youtube.com/watch?v=cKapasYw4VU" target="_blank" rel="noreferrer">Open this video on YouTube</a>
+              </p>
 
-kruskal.test(value ~ variable)</pre>
-          </section>
-        </aside>
-      </div>
-    </section>
+              <p class="video-title">How to Make a Grouped Graph Combined with Scatter Plot Online</p>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/2fZTLKcPGPE?cc_load_policy=1&vq=hd1080"
+                  title="How to Make a Grouped Graph Combined with Scatter Plot Online"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="video-links">
+                <a href="https://www.youtube.com/watch?v=2fZTLKcPGPE" target="_blank" rel="noreferrer">Open this video on YouTube</a>
+              </p>
 
-  </main>
-  
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <section>
-          <h2>Submit your feedback and suggestions</h2>
-          <ul class="footer-links">
-            <li><a href="https://forms.gle/rfHCnaPukkL6fbxq6" target="_blank" rel="noopener noreferrer">Google form</a></li>
-            <li><a href="https://scatterplot.bar/blog/about" target="_blank" rel="noopener noreferrer">About</a></li>
-          </ul>
-        </section>
-        <div class="footer-meta">
-          <p>&copy; Maxim Bespalov. All rights reserved.</p>
+              <p class="video-title">How to Make Stacked Bar Charts Online. How to Generate Percent Stacked Bar Charts on the web</p>
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/d5ShdJHsGVY?cc_load_policy=1&vq=hd1080"
+                  title="How to Make Stacked Bar Charts Online"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="video-links">
+                <a href="https://www.youtube.com/watch?v=d5ShdJHsGVY" target="_blank" rel="noreferrer">Open this video on YouTube</a>
+              </p>
+            </header>
+          </article>
         </div>
       </div>
-    </footer>
-    
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/loading.js"></script>
-</body>
+
+      <!-- Main -->
+      <div class="wrapper style1">
+        <div class="container">
+          <article id="main" class="special">
+            <header>
+              <h2><a href="#stats">Statistics</a></h2>
+              <p>The R code for statistical tests</p>
+            </header>
+
+            <h2>Parametric tests in R online</h2>
+
+            <a href="index.html"><h3>Welch Two Sample t-test</h3></a>
+            <pre><code>t.test(Condition_1, Condition_2)</code></pre>
+
+            <a href="index.html"><h3>Paired t-test</h3></a>
+            <pre><code>t.test(Condition_1, Condition_2, paired = TRUE)</code></pre>
+
+            <a href="index.html"><h3>One-way ANOVA followed by Tukey HSD (Multiple comparisons) calculator</h3></a>
+            <pre><code>res.aov <- aov(value ~ variable)
+summary(res.aov)
+TukeyHSD(res.aov)</code></pre>
+
+            <a href="index.html"><h3>Two-way ANOVA followed by Tukey HSD (Multiple comparisons for grouped data) calculator</h3></a>
+            <pre><code>res.aov <- aov(Values ~ Categories_from_column_2 + Categories_from_column_1)
+summary(res.aov)
+TukeyHSD(res.aov)</code></pre>
+
+            <h2>Non-parametric tests in R online</h2>
+
+            <a href="index.html"><h3>Mann Whitney U Test (Wilcoxon) calculator</h3></a>
+            <pre><code>wilcox.test(Condition_1, Condition_2, exact = FALSE)</code></pre>
+
+            <a href="index.html"><h3>Paired Wilcoxon Test (Signed-Rank Test) calculator</h3></a>
+            <pre><code>wilcox.test(Condition_1, Condition_2, exact = FALSE, paired = TRUE)</code></pre>
+
+            <a href="index.html"><h3>Kruskal-Wallis (Multiple comparisons) Test calculator</h3></a>
+            <pre><code>kruskal.test(value ~ variable)</code></pre>
+          </article>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row"></div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <section class="contact">
+                <header>
+                  <h3>Submit your feedback and suggestions</h3>
+                </header>
+                <ul class="icons">
+                  <li><a href="https://forms.gle/rfHCnaPukkL6fbxq6" class="icon brands fa-google"><span class="label">Google</span></a></li>
+                </ul>
+              </section>
+
+              <div class="copyright">
+                <ul class="menu">
+                  <li>&copy; Maxim Bespalov. All rights reserved.</li>
+                  <li>Website template design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
