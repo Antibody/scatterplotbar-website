@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Correlation heatmap free web app</title>
+  <meta name="description" content="Generate correlation heatmaps online with a cleaner static landing page and local site shell." />
+  <link rel="canonical" href="https://scatterplot.bar/correlation-heatmap.html" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">ScatterPlot.Bar</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="correlation-heatmap.html" aria-current="page">Correlation Heatmap</a></li><li><a href="calcium-imaging.html">Calcium Imaging</a></li><li><a href="volume-from-mass-and-concentration-mM.html">Volume and Molarity</a></li><li><a href="https://forms.gle/txsjwFGLGsriBfni9" target="_blank" rel="noopener noreferrer">Feedback</a></li><li><a href="news.html">News</a></li><li><a href="instructions.html">Instructions</a></li><li><a href="blog/">Blog</a></li>
+            <li class="nav-dropdown">
+              <button class="dropdown-trigger" type="button" aria-expanded="false">Languages</button>
+              <ul class="dropdown-menu">
+                <li><a href="#" aria-current="true">English</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+  <main id="main-content">
+    
+    <section class="page-intro">
+      <div class="container">
+        <h1>Make correlation heatmaps online</h1>
+        <p>Generate Pearson correlation heatmaps in the browser and work from column-based CSV input.</p>
+        <p class="inline-note">It can take a little while for the correlation heatmaps app to wake up. If the embedded page stalls, open the live page in a new tab.</p>
+      </div>
+    </section>
+    
+      <section class="embed-section">
+        <div class="container">
+          <div class="app-shell">
+            <div class="app-shell-head">
+              <div>
+                <h2>Correlation Heatmap page</h2>
+                <p>Embedded live page with loading state and retry controls.</p>
+              </div>
+              <div class="app-actions">
+                <a class="button button-secondary" href="https://scatterplot.bar/correlation-heatmap.html" target="_blank" rel="noopener noreferrer">Open live page</a>
+                <button class="button" type="button" data-role="reload">Reload app</button>
+              </div>
+            </div>
+            <div class="app-frame-shell" data-src="https://scatterplot.bar/correlation-heatmap.html" data-loading-text="Waiting for the embedded page to respond." data-slow-text="The server is still waking up. This can take a few more seconds." data-timeout-ms="22000" data-compact="true" data-state="loading">
+              <div class="loading-panel" role="status" aria-live="polite">
+                <div class="spinner" aria-hidden="true"></div>
+                <h3>Loading the app</h3>
+                <p class="status-copy" data-role="loading-message">Waiting for the embedded page to respond.</p>
+                <div class="progress-track" aria-hidden="true"><div class="progress-indicator"></div></div>
+              </div>
+              <div class="fallback-panel" data-role="fallback" hidden>
+                <h3>The embedded page is taking longer than expected</h3>
+                <p class="status-copy">You can keep waiting, reload the embed, or open it in a new tab.</p>
+                <div class="fallback-actions">
+                  <button class="button" type="button" data-role="retry">Retry loading</button>
+                  <a class="button button-secondary" href="https://scatterplot.bar/correlation-heatmap.html" target="_blank" rel="noopener noreferrer">Open live page</a>
+                </div>
+              </div>
+              <iframe title="Correlation Heatmap page" src="about:blank" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <section class="page-content">
+      <div class="container page-grid">
+        <article class="stack">
+          <section>
+            <h2>Generate Correlation Heatmaps Web App</h2>
+            <p>How to make a correlation heatmap in a free alternative to Excel and GraphPad Prism.</p>
+            <p>Upload your data as a CSV file and keep the variables arranged in columns. If the file includes a header row, enable the header option in the app. You can adjust decimal and column separators if needed.</p>
+            <p>The app supports a “pretty” correlation heatmap and a more regular heatmap style, and it can also calculate the number and percentage of correlating pairs.</p>
+            <p>The heatmap tool is based on R packages including <code>pheatmap</code> and <code>heatmap.2</code>. It can also calculate the total number of datapoints over a threshold, which is useful for estimating overall sample activity.</p>
+            <p>The shared statistics section also includes Mann-Whitney U test, Welch t-test, paired t-test, ANOVA followed by Tukey HSD, and Kruskal-Wallis tests.</p>
+            <p>The app is based on R and Shiny and is hosted through shinyapps.io.</p>
+          </section>
+        </article>
+        <aside class="stack">
+          <section>
+            <h2>What to prepare before uploading data</h2>
+            <ul class="section-list">
+              <li><p>Keep the dataset organised in columns.</p></li>
+              <li><p>Enable the header option when the CSV already contains column names.</p></li>
+              <li><p>Adjust decimal and separator settings if the import format differs from the default.</p></li>
+              <li><p>Choose between the default palette and the alternative “pretty” heatmap style.</p></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Keywords</h2>
+            <p class="keyword-line">Pearson correlation heatmaps web app. Create scientific data visualisations with no coding.</p>
+          </section>
+        </aside>
+      </div>
+    </section>
+    
+  </main>
+  
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <section>
+          <h2>Submit your feedback and suggestions</h2>
+          <ul class="footer-links">
+            <li><a href="https://forms.gle/rfHCnaPukkL6fbxq6" target="_blank" rel="noopener noreferrer">Google form</a></li>
+            <li><a href="https://scatterplot.bar/blog/about" target="_blank" rel="noopener noreferrer">About</a></li>
+          </ul>
+        </section>
+        <div class="footer-meta">
+          <p>&copy; ScatterPlot.Bar. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/loading.js"></script>
+</body>
+</html>

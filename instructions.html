@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ScatterPlotBar instructions</title>
+  <meta name="description" content="Instructions page rebuilt from the current live content into a static local page." />
+  <link rel="canonical" href="https://scatterplot.bar/instructions.html" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">ScatterPlot.Bar</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="siteNav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="correlation-heatmap.html">Correlation Heatmap</a></li><li><a href="calcium-imaging.html">Calcium Imaging</a></li><li><a href="volume-from-mass-and-concentration-mM.html">Volume and Molarity</a></li><li><a href="https://forms.gle/txsjwFGLGsriBfni9" target="_blank" rel="noopener noreferrer">Feedback</a></li><li><a href="news.html">News</a></li><li><a href="instructions.html" aria-current="page">Instructions</a></li><li><a href="blog/">Blog</a></li>
+            <li class="nav-dropdown">
+              <button class="dropdown-trigger" type="button" aria-expanded="false">Languages</button>
+              <ul class="dropdown-menu">
+                <li><a href="#" aria-current="true">English</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+  <main id="main-content">
+    
+    <section class="page-intro">
+      <div class="container">
+        <h1>ScatterPlotBar instructions</h1>
+        <p>This page restructures the live instructions content into a cleaner local reference page.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container page-grid">
+        <article class="stack">
+          <section>
+            <h2>Demo Web App for Calcium Imaging Time-Lapse Series Analysis</h2>
+            <p>The live page describes the calcium imaging app as a demo that will crash if more than four frames are analysed on the server. For larger series, it points users to the GitHub code and notes that running the code as a Shiny app would require an environment such as RStudio.</p>
+          </section>
+          <section>
+            <h2>Generation of Correlation Heatmaps Online</h2>
+            <p>The instructions explain that detrending can produce negative values, and the app converts those negatives to NaN values before continuing.</p>
+            <pre>br &lt;- 50
+break.points &lt;- seq(from = br, to = dim(dat2)[1], by = br)
+dat3 &lt;- dat2
+for (i in 1:dim(dat2)[2]) {
+  dat3[, i] &lt;- detrend(dat2[, i], bp = break.points)
+}
+dat3[, 1] &lt;- dat2[, 1]</pre>
+          </section>
+          <section>
+            <h2>Video instructions</h2>
+            <ul class="section-list inline-code-list">
+              <li><p>How to make a scatter plot overlaid with column graphs online.</p></li>
+              <li><p>How to make a grouped graph combined with scatter plot online.</p></li>
+              <li><p>How to make stacked bar charts online and generate percent stacked bar charts on the web.</p></li>
+            </ul>
+          </section>
+        </article>
+        <aside class="stack">
+          <section>
+            <h2>Parametric tests in R online</h2>
+            <pre>t.test(Condition_1, Condition_2)
+
+t.test(Condition_1, Condition_2, paired = TRUE)
+
+res.aov &lt;- aov(value ~ variable)
+summary(res.aov)
+TukeyHSD(res.aov)
+
+res.aov &lt;- aov(Values ~ Categories_from_column_2 + Categories_from_column_1)
+summary(res.aov)
+TukeyHSD(res.aov)</pre>
+          </section>
+          <section>
+            <h2>Non-parametric tests in R online</h2>
+            <pre>wilcox.test(Condition_1, Condition_2, exact = FALSE)
+
+wilcox.test(Condition_1, Condition_2, exact = FALSE, paired = TRUE)
+
+kruskal.test(value ~ variable)</pre>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <section>
+          <h2>Submit your feedback and suggestions</h2>
+          <ul class="footer-links">
+            <li><a href="https://forms.gle/rfHCnaPukkL6fbxq6" target="_blank" rel="noopener noreferrer">Google form</a></li>
+            <li><a href="https://scatterplot.bar/blog/about" target="_blank" rel="noopener noreferrer">About</a></li>
+          </ul>
+        </section>
+        <div class="footer-meta">
+          <p>&copy; Maxim Bespalov. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/loading.js"></script>
+</body>
+</html>
